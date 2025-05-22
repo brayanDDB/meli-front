@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.layout{
+  display: grid;
+  grid-template-areas: 
+  "header header header header"
+  "nav nav nav nav"
+  "content content content content"
+  "payment payment payment payment"
+  "footer footer footer footer"
+  ;
+  width: 85%;
+  margin: 0 auto;
+}
+
+header{
+  grid-area: header;
+}
+
+nav{
+  grid-area: nav;
+}
+
+.payment{
+  grid-area: payment;
+}
+
+footer{
+  grid-area: footer;
+}
+
+.header {
+  border-bottom: 3px solid black;
+}
+
+.header nav ul{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.header li a{
+  color:black;
+  text-decoration: none;
+  margin-left: 15px;
+  margin-right: 15px;
+  transition: all 300ms;
+}
+
+.header .active,
+.header li a:hover{
+  color: #fa4529;
+}
+
+.content{
+  min-height: 400px;
+}
+
+.phones{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.phone-item{
+  flex-basis: 30%;
+  flex-grow: 1;
+  margin: 30px;
+}
+
+.phone-item h2{
+  border-bottom: 1px solid rgb(124, 120, 120);
+}
+
+.phone-item h2 a{
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  transition: all 300ms;
+}
+
+.phone-item h2 a:hover{
+  color: #fa4529;
+}
+
+.phone-item .mask{
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  box-shadow: 0px 5px 15px #ddd;
+}
+
+.phone-item img{
+  width: 120%;
+  transition: all 500ms;
+}
+
+.phone-item .mask img:hover{
+  width: 150%;
+  margin-right: 30%;
+}
+
+.phone-item span{
+  display: block;
+  color: gray;
+  margin-top: 25px;
+}
+
+.page-phone .mask{
+  height: 10%;
+  overflow: hidden;
+  box-shadow: 0px 0px 3px #ccc;
+}
+
+.page-phone span{
+  display: block;
+  color: gray;
+  margin-top: 25px;
+}
+
+.page-phone p{
+  display:inline;
+}
+
+.footer{
+  min-height: 40px;
+  line-height: 0px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 80px;
+  border-top: 3px solid black;
+  padding-top: 45px;
+  background: #f5f5f5;
+  color: #444;
+}
